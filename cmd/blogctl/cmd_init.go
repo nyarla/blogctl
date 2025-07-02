@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-const defaultEnvExample = `# credentails
+const defaultEnvExample = `# credentials
 BLOGCTL_HATENA_ID=
 BLOGCTL_BLOG_ID=
 BLOGCTL_APIKEY=
@@ -41,7 +41,8 @@ func doInitEnv() {
 	cmd.Stdin = os.Stdin
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout
-	if err := cmd.Run(); err != nil {
+
+	if err = cmd.Run(); err != nil {
 		log.Fatalf("failed to edit `.env` file: %v", err)
 	}
 

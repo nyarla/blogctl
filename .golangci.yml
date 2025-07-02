@@ -5,6 +5,13 @@ linters:
     forbidigo:
       forbid:
         - pattern: "^print(ln)?$"
+    mnd:
+      ignored-numbers:
+        - "0600"
+    varnamelen:
+      ignore-names:
+        - fn
+        - err
   exclusions:
     generated: lax
     presets:
@@ -12,6 +19,8 @@ linters:
       - common-false-positives
       - legacy
       - std-error-handling
+    linters:
+      - wsl
     paths:
       - third_party$
       - builtin$
