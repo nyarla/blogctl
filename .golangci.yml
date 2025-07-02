@@ -1,6 +1,8 @@
 version: "2"
 linters:
   default: all
+  disable:
+    - wsl
   settings:
     forbidigo:
       forbid:
@@ -19,8 +21,6 @@ linters:
       - common-false-positives
       - legacy
       - std-error-handling
-    linters:
-      - wsl
     paths:
       - third_party$
       - builtin$
