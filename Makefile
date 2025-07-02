@@ -9,5 +9,11 @@ tidy:
 test:
 	go test -v ./...
 
-podman-test:
-	env DOCKER_HOST=unix:///run/user/$$(id -u)/podman/podman.sock act pull_request
+lint:
+	golangci-lint run
+
+podman:
+	env DOCKER_HOST=unix:///run/user/$$(id -u)/podman/podman.sock $(CMD)
+
+act-pull_request:
+	@$(MAKE) podman CMD="act pull_request"

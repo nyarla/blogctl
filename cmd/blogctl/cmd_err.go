@@ -7,7 +7,7 @@ import (
 )
 
 func showUnsupportedCommand() {
-	fmt.Printf("Unkown command: %s\n\n", strings.Join(os.Args[1:], " "))
+	fmt.Printf("Unknown command: %s\n\n", strings.Join(os.Args[1:], " "))
 	fmt.Print(help)
 	os.Exit(1)
 }
