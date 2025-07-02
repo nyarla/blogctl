@@ -1,10 +1,19 @@
 version: "2"
 linters:
   default: all
+  disable:
+    - wsl
   settings:
     forbidigo:
       forbid:
         - pattern: "^print(ln)?$"
+    mnd:
+      ignored-numbers:
+        - "0600"
+    varnamelen:
+      ignore-names:
+        - fn
+        - err
   exclusions:
     generated: lax
     presets:
