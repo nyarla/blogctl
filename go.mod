@@ -1,3 +1,3 @@
-module github.com/nyarla/blog-control
+module github.com/nyarla/blogctl
 
 go 1.24.3
