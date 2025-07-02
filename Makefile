@@ -1,5 +1,8 @@
 all: build
 
+shell:
+	nix shell nixpkgs#go nixpkgs#gotools nixpkgs#golangci-lint
+
 build:
 	go build -o blogctl ./...
 
