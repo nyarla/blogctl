@@ -4,7 +4,7 @@ shell:
 	nix shell nixpkgs#go nixpkgs#gotools nixpkgs#golangci-lint
 
 build:
-	go build -o blogctl ./...
+	go build -o blogctl src/cmd/blogctl/*.go
 
 tidy:
 	go mod tidy
